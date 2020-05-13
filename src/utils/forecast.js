@@ -12,11 +12,12 @@ const forecast = (latitude, longitude, callback) => {
             callback('unable to deal with this shit', undefined)
         } else {
             callback(undefined, 
-                `Today we can expect ${body.current.weather_descriptions[0]} skies. It is currently ${body.current.temperature} Kelvin. There is a ${body.current.precip} chance of rain today`
+                `Today we can expect ${body.current.weather_descriptions[0]} skies. It is currently ${body.current.temperature} Kelvin. There is a ${body.current.precip} chance of rain today. You should also note that it feels like ${body.current.feelslike}. There is a uv_index of ${body.current.uv_index} so dont forget your sunscreen ked`
             )   
-
+                   
     }
     })
 }
 
 module.exports = forecast
+
